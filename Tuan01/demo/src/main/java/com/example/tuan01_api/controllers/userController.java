@@ -10,6 +10,7 @@ import com.example.tuan01_api.repositories.userRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -26,13 +27,12 @@ public class userController {
     private userRepositories userRepo;
     @GetMapping("/users")   // get all users
     List<user> getAllUsers() {
-        for(int i = 0; i < 10; i++) {
-            userRepo.save(new user(i, "user" + i));
-        }   // add 10 users to database
         return userRepo.findAll();
     }
     @GetMapping("/users/{id}") // get user by id
     user getUserById(@PathVariable long id) {
         return userRepo.findById(id).get();
     }
+
+
 }
