@@ -36,4 +36,8 @@ public class AuthService {
                 .compact();
     }
 
+    public void registerUser(User user) {
+        // Register user
+
+    }
 }
