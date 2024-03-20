@@ -1,5 +1,5 @@
 /*
- * @ (#) UserSevice.java   1.0     08/03/2024
+ * @ (#) UserService.java   1.0     08/03/2024
  *
  * Copyright (c) 2024 IUH All rights reserved
  */

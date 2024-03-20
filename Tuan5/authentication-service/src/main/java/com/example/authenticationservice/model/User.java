@@ -17,7 +17,7 @@ import java.io.Serializable;
  *version: 1.0
  */
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
