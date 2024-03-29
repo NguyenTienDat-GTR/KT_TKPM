@@ -1,0 +1,29 @@
+#  server:
+#    port: 8083
+#
+spring:
+  application:
+    name: APIGateway
+  cloud:
+    gateway:
+      routes:
+        - id: SERVICE-student
+          uri: lb://SERVICE-student
+          predicates:
+            - Path=/api/v1/student/**
+#          filters:
+#            - AuthenticationFilter
+        - id: SERVICE-class
+          uri: lb://SERVICE-class
+          predicates:
+            - Path=/api/v2/class/**
+#          filters:
+#            - AuthenticationFilter
+        - id: SERVICE-Enrollment
+          uri: lb://SERVICE-Enrollment
+          predicates:
+            - Path=/api/v3/enrollment/**
+#          filters:
+#            - AuthenticationFilter
+
+
